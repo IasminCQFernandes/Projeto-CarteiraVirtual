@@ -71,6 +71,7 @@ main h1{
 
     
     margin: auto;
+    margin-bottom: 5%;
     border: 1px solid #d3d3d3;
     width: 90%;
 
@@ -95,11 +96,11 @@ main h1{
     font-weight: bolder;
     padding-top: 3%;
 }
-.saldo span{
-    font-size: 0.8em;
-}
-.saldo sup{
-    font-size: 0.8em;
+#valor-total{
+    font-size: 1.2em;
+    width: 70%;
+    background-color: #fff;
+    border: none;
 }
 
 .entrada{
@@ -205,6 +206,7 @@ main h1{
 @media screen and (min-width:1024px) {
     #gif{
         top: -200px;
+        width: 20%;
     }
     
     h2{

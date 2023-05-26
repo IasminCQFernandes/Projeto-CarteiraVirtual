@@ -81,40 +81,102 @@
             <div class="painel">
 
                 <div class="saldo">
-                    <img src="assets/eyes.png">
-                    <h3><span>R$</span> 1.098, <sup>98</sup></h3>
-                    <p>ATUALIZADO  AGORA</p>
+
+                    <img src="assets/eyes.png" id="eyes" onclick="ocultar()">
+
+                    <label for="valor-total" >R$
+                    
+                    <input type="number" id="valor-total" placeholder="0"  disabled value="0"> 
+                    </label>
+                   
+
+                    <p id="atualizacao">ATUALIZADO  AGORA</p>
                 </div>
 
 
                 <div class="entrada">
+
                     <div class="add">
                         <h3>ADICIONAR ENTRADA</h3>
                         <label for="valor-entrada">VALOR:</label>
-                        <input type="number" id="valor-entrada" placeholder="R$ 0,00">
-                        <button>ADICIONAR</button>
+
+                        <input type="number" id="valor-entrada" placeholder="R$ 0,00" >
+
+                        <button onclick="add()">ADICIONAR</button>
                     </div>
 
                     <div class="tipo">
                         <h4>TIPO DE ENTRADA</h4>
                         <div class="check">
-                            <input type="checkbox" id="mes">
-                            <label for="mes">MENSAL</label>
+                            <input type="radio" id="mes" name="tipos" required>
+                            <label for="mes" >MENSAL</label>
                         </div>
 
                         <div class="check">
-                            <input type="checkbox" id="semana">
-                            <label for="semana">SEMANAL</label><br>
+                            <input type="radio" id="semana" name="tipos">
+                            <label for="semana" >SEMANAL</label><br>
                         </div>
 
                         <div class="check">
-                        <input type="checkbox" id="atipico">
-                        <label for="atipico">ATIPÍCO</label>
+                        <input type="radio" id="atipico" name="tipos">
+                        <label for="atipico" >ATIPÍCO</label>
                         </div>
                     </div>
                 </div>
             </div>
+           <h1>DESPESAS</h1>
+            <div class="painel">
+
+               
+
+                <div class="saldo">
+
+                    <img src="assets/eyes.png" id="eyes" onclick="ocultar()">
+
+                    <label for="valor-total" >R$
+                    
+                    <input type="number" id="valor-total" placeholder="0"  disabled value="0"> 
+                    </label>
+                   
+
+                    <p id="atualizacao">ATUALIZADO  AGORA</p>
+                </div>
+
+
+                <div class="entrada">
+
+                    <div class="add">
+                        <h3>ADICIONAR ENTRADA</h3>
+                        <label for="valor-entrada">VALOR:</label>
+
+                        <input type="number" id="valor-entrada" placeholder="R$ 0,00" >
+
+                        <button onclick="add()">ADICIONAR</button>
+                    </div>
+
+                    <div class="tipo">
+                        <h4>TIPO DE ENTRADA</h4>
+                        <div class="check">
+                            <input type="radio" id="mes" name="tipos" required>
+                            <label for="mes" >MENSAL</label>
+                        </div>
+
+                        <div class="check">
+                            <input type="radio" id="semana" name="tipos">
+                            <label for="semana" >SEMANAL</label><br>
+                        </div>
+
+                        <div class="check">
+                        <input type="radio" id="atipico" name="tipos">
+                        <label for="atipico" >ATIPÍCO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </main>
+
+     
 
     </div>
 </body>
