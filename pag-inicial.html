@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pag-inicial.css">
+    <script src="script.js" defer></script>
+    <title>MINHAS FINANÇAS</title>
+</head>
+<body>
+    <aside>
+        <header>
+            <h1>LOGIN / CADASTRAR</h1>
+        </header>
+    
+        <main>
+    
+            <div class="entrar">
+                
+                <form>
+                    <label for="apelido">APELIDO:</label><br>
+                    <input type="text"  id="apelido" placeholder="Ana" required min="3">
+                    <br>
+    
+                    <label for="email" >E-MAIL:</label><br>
+                    <input type="email"  id="email" placeholder="ana@xxxx.com" required min="8">
+    
+                    <br>
+                    <label for="senha">SENHA:</label><br>
+                    <input type="password" placeholder="******" required min="8">
+    
+                    <br>
+                    <button type="submit" id="enter">
+                        ENTRAR
+                    </button>
+                </form>
+            </div>
+    
+            <div class="cadastrar">
+                <form>
+                    <label for="apelido">APELIDO:</label><br>
+                    <input type="text" placeholder="Ana">
+                     <br>
+                    <label for="email">E-MAIL:</label><br>
+                    <input type="email" placeholder="ana@xxxx.com">
+    
+                     <br>
+                    <label for="senha">SENHA:</label><br>
+                    <input type="password" placeholder="******">
+    
+                     <br>
+                    <button type="" onclick="cadastrar()" >
+                        CADASTRAR</button>
+                </form>
+            </div>
+        </main>
+    </aside>
+
+
+    <div class="financas">
+        <header>
+            <img src="assets/gif.gif" alt="gif" id="gif">
+            
+                <img src="assets/icon-usuario.png" alt="imagem do usuario">
+
+            
+                <h2 id="nomes"> Olá, Fulano</h2>
+
+                <div class="profile">
+                <img src="assets/icons8-email-30.png" alt="email">
+                <p id="emails">fulano@gmail.com</p>
+            </div>
+        </header>
+
+
+    
+        <main>
+            <h1>MINHAS FINANÇAS</h1>
+            <div class="painel">
+
+                <div class="saldo">
+                    <img src="assets/eyes.png">
+                    <h3><span>R$</span> 1.098, <sup>98</sup></h3>
+                    <p>ATUALIZADO  AGORA</p>
+                </div>
+
+
+                <div class="entrada">
+                    <div class="add">
+                        <h3>ADICIONAR ENTRADA</h3>
+                        <label for="valor-entrada">VALOR:</label>
+                        <input type="number" id="valor-entrada" placeholder="R$ 0,00">
+                        <button>ADICIONAR</button>
+                    </div>
+
+                    <div class="tipo">
+                        <h4>TIPO DE ENTRADA</h4>
+                        <div class="check">
+                            <input type="checkbox" id="mes">
+                            <label for="mes">MENSAL</label>
+                        </div>
+
+                        <div class="check">
+                            <input type="checkbox" id="semana">
+                            <label for="semana">SEMANAL</label><br>
+                        </div>
+
+                        <div class="check">
+                        <input type="checkbox" id="atipico">
+                        <label for="atipico">ATIPÍCO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>

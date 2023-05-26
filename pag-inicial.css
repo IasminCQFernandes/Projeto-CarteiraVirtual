@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.financas{
+    display: none;
+}
+header{
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px solid rgba(133, 133, 133, 0.63);
+}
+header img{
+    margin-top: 4%;
+    margin-left: 4%;
+}
+#gif{
+    position: relative;
+    width: 25%;
+    rotate: 90deg;
+    float: right;
+    top: -140px;
+}
+
+h2{
+    display: inline-block;
+    position: relative;
+    top: -50px;
+}
+
+.profile{
+    display: inline-block;
+    position: relative;
+    top: -50px;
+    left: 135px;
+    width: 50%;
+}
+.profile img{
+    display: inline-block;
+    width: 20px;
+    margin: 0%; 
+    position: relative;
+    top: 5px;
+}
+.profile p{
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 0%;
+}
+
+main{
+    width: 100vw;
+    height: 70%;
+
+ 
+}
+main h1{
+    font-size: 1.5em;
+    margin: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.painel{
+    display: grid;
+    grid-template-areas: 
+    "saldo entrada";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
+
+    
+    margin: auto;
+    border: 1px solid #d3d3d3;
+    width: 90%;
+
+}
+.saldo{
+    grid-area: saldo;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    border-right: 1px solid lightgray;
+    padding: 2%;
+    
+}
+.saldo img{
+    width: 10%;
+}
+.saldo p{
+    font-size: 0.7em;
+    font-weight: bolder;
+    padding-top: 3%;
+}
+.saldo span{
+    font-size: 0.8em;
+}
+.saldo sup{
+    font-size: 0.8em;
+}
+
+.entrada{
+    grid-area: entrada;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 2%;
+    font-size: 0.8em;
+
+}
+.tipo{
+    margin: 2%;
+    grid-area: tipo;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+.tipo h4{
+   
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    border-right: 1px solid lightgray;
+    padding: 2%;
+}
+.add button{
+    width: 50%;
+    margin-top: 4%;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px solid;
+    font-weight: bolder;
+    padding: 1%;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:320px) {
+    #gif{
+        top: -70px;
+        width: 30%;
+    }
+
+    h2{
+        top: -35px;
+        font-size: 1.6em;
+    }
+    .profile{
+        top: -20px;
+        left: 8%;
+        width: 90%;
+    }
+    .profile img{
+        display: inline-block;
+        width: 20px;
+        margin: 0%; 
+        position: relative;
+        top: 5px;
+    }
+    .profile p{
+        display: inline-block;
+        font-size: 1em;
+        margin: 0%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #gif{
+        top: -130px;
+        width: 30%;
+    }
+
+    h2{
+        top: -45px;
+    
+    }
+    .profile{
+        display: inline-block;
+        position: relative;
+        top: -50px;
+        left: 125px;
+        width: 50%;
+    }
+
+}
+@media screen and (min-width:1024px) {
+    #gif{
+        top: -200px;
+    }
+    
+    h2{
+        top: -45px;
+    }
+}
