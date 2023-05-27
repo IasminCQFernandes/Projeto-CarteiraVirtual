@@ -84,10 +84,13 @@
 
                     <img src="assets/eyes.png" id="eyes" onclick="ocultar()">
 
-                    <label for="valor-total" >R$
+                    <div id="valor-oculto">
+                        <label for="valor-total" >R$
                     
-                    <input type="number" id="valor-total" placeholder="0"  disabled value="0"> 
-                    </label>
+                            <input type="number" id="valor-total" placeholder="0"  disabled value="0"> 
+                        </label>
+                    </div>
+                    
                    
 
                     <p id="atualizacao">ATUALIZADO  AGORA</p>
@@ -107,70 +110,132 @@
 
                     <div class="tipo">
                         <h4>TIPO DE ENTRADA</h4>
+                   
                         <div class="check">
                             <input type="radio" id="mes" name="tipos" required>
                             <label for="mes" >MENSAL</label>
                         </div>
+            
 
+                    
                         <div class="check">
                             <input type="radio" id="semana" name="tipos">
                             <label for="semana" >SEMANAL</label><br>
+                  
                         </div>
 
+                 
                         <div class="check">
-                        <input type="radio" id="atipico" name="tipos">
-                        <label for="atipico" >ATIPÍCO</label>
+                            <input type="radio" id="atipico" name="tipos">
+                            <label for="atipico" >ATIPÍCO</label>
                         </div>
+                 
                     </div>
                 </div>
             </div>
-           <h1>DESPESAS</h1>
-            <div class="painel">
 
-               
 
-                <div class="saldo">
 
-                    <img src="assets/eyes.png" id="eyes" onclick="ocultar()">
+            <aside class="despesas">
 
-                    <label for="valor-total" >R$
+
+                <h1 id="h1-despesas">DESPESAS</h1>
+                <button id="add-desp" onclick="abaOculta()">ADICIONAR</button>
+
+
+                <div class="add-despesas" id="ocultar">
+
+                    <div class="desc-despesas">
+                        <label for="nome-desp" class="title-upper">TITULO:</label>
+                        <input type="text" id="nome-desp"><br>
+
+                        <label for="valor-desp" class="title-upper">VALOR:</label>
+                        <input type="number" id="valor-desp"><br>
+
+                        <label for="desc-desp" class="title-upper">DESCRIÇÃO:</label>
+                        <textarea id="desc-desp" cols="20" rows="2"></textarea>
+
+                    </div>
+
+                    <div class="tipo-despesas">
+
+                        <h4>TIPO DE ENTRADA</h4> 
+
+                        <div class="check">
+                            <input type="radio" id="mes-desp" name="tipos" required>
+                            <label for="mes-desp" >MENSAL</label>
+                        </div>
+
+                        <div class="check">
+                            <input type="radio" id="semana-desp" name="tipos">
+                            <label for="semana-desp" >SEMANAL</label><br>
+                        </div>
+
+                        <div class="check">
+                            <input type="radio" id="atipico-desp" name="tipos">
+                            <label for="atipico-desp" >ATIPÍCO</label><br>
+
+                            <button id="addDespesas" onclick="addDespesas()">ADICIONAR</button>
+                        </div>
+
+                    </div>
+                </div>  
+
+         </aside>
+
+            <div class="organizacao">
+
+                <div class="mensais">
+
+                    <h3>MENSAL</h3>
+
+                    <div class="itens">
+                        <p id="id-mensal"></p>
+                        <p id="valor-mensal">R$ </p>
+                        <p id="descricao-mensal"></p>
+
+                        <div class="editores">
+                            <img src="assets/icons8-edit-20 (1) - Copia.png" alt="editar" class="edit" onclick="editar()">
+
+                            <img src="assets/icons8-check-20.png" alt="remover" class="realizado" onclick="finalizadoMensal()">
+                        </div>
+                    </div>
                     
-                    <input type="number" id="valor-total" placeholder="0"  disabled value="0"> 
-                    </label>
-                   
-
-                    <p id="atualizacao">ATUALIZADO  AGORA</p>
                 </div>
 
 
-                <div class="entrada">
+                <div class="semanais">
+                    <h3>SEMANAL</h3>
 
-                    <div class="add">
-                        <h3>ADICIONAR ENTRADA</h3>
-                        <label for="valor-entrada">VALOR:</label>
+                    <div class="itens">
+                        <p id="id-semanal"></p>
+                        <p id="valor-semanal">R$</p>
+                        <p id="descricao-semanal"></p>
 
-                        <input type="number" id="valor-entrada" placeholder="R$ 0,00" >
+                        <div class="editores">
+                            <img src="assets/icons8-edit-20 (1) - Copia.png" alt="editar" class="edit" onclick="editar()">
 
-                        <button onclick="add()">ADICIONAR</button>
-                    </div>
-
-                    <div class="tipo">
-                        <h4>TIPO DE ENTRADA</h4>
-                        <div class="check">
-                            <input type="radio" id="mes" name="tipos" required>
-                            <label for="mes" >MENSAL</label>
-                        </div>
-
-                        <div class="check">
-                            <input type="radio" id="semana" name="tipos">
-                            <label for="semana" >SEMANAL</label><br>
-                        </div>
-
-                        <div class="check">
-                        <input type="radio" id="atipico" name="tipos">
-                        <label for="atipico" >ATIPÍCO</label>
+                            <img src="assets/icons8-check-20.png" alt="remover" class="realizado" onclick="finalizadoSemanal()">
                         </div>
                     </div>
+
+
+                </div>
+
+                <div class="atipicos">
+                        <h3>ATIPICOS</h3>
+                        <div class="itens">
+                            <p id="id-atipico"></p>
+                            <p id="valor-atipico">R$ </p>
+                            <p id="descricao-atipico"></p>
+
+                            <div class="editores">
+                                <img src="assets/icons8-edit-20 (1) - Copia.png" alt="editar" class="edit" onclick="editar()">
+    
+                                <img src="assets/icons8-check-20.png" alt="remover" class="realizado" onclick="finalizadoAtipico()">
+                            </div>
+                        </div>
+                    
                 </div>
             </div>
             

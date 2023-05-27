@@ -46,7 +46,7 @@ function ocultar(){
    
     if(abre){
         
-        document.getElementById("valor-total").style="display:none;";
+        document.getElementById("valor-oculto").style="display:none;";
         abre=false;
 
         document.getElementById('eyes').src = 'assets/no-eyes.png';
@@ -55,7 +55,7 @@ function ocultar(){
        
     }else{
     
-        document.getElementById("valor-total").style="display:block;";
+        document.getElementById("valor-oculto").style="display:block;";
         abre = true;
 
         document.getElementById('eyes').src = 'assets/eyes.png';
@@ -84,7 +84,7 @@ function add(){
   obterValorSelecionado()
 
   limpaInput();
-
+  limparSelecao() 
   
 
 }
@@ -107,3 +107,143 @@ function obterValorSelecionado() {
     }
   }
 }
+
+
+//ADD DESPESA
+//ABRIR E FECHAR ABA DE ADD DESPESA
+function abaOculta() {
+  
+  var elementos = document.getElementsByClassName("add-despesas");
+  
+  for (var i = 0; i < elementos.length; i++) {
+    if (elementos[i].style.display === "none") {
+      elementos[i].style.display = "grid";
+    } else {
+      elementos[i].style.display = "none";
+    }
+  }
+}
+
+
+
+
+
+function addDespesas() {
+
+  //PEGAR O VALOR DO INPUT SELECIONADO
+  var elementoSelecionado = document.querySelector('.tipo-despesas input[name="tipos"]:checked');
+  
+  if (elementoSelecionado) {
+    var valorSelecionado = elementoSelecionado.value;
+
+    var labelSelecionado = document.querySelector('.tipo-despesas label[for="' + elementoSelecionado.id + '"]').textContent;
+
+    console.log("Valor selecionado:", valorSelecionado);//teste
+    console.log("Label selecionado:", labelSelecionado);//teste
+  
+
+    //pegar os valores do input
+    let titulos = document.getElementById('nome-desp').value;
+    let titulo = titulos.toUpperCase();
+    console.log(titulo);//teste
+    
+
+    let valor = document.getElementById('valor-desp').value;
+    console.log(valor);//teste
+
+    let descricao = document.getElementById('desc-desp')
+    let descText = descricao.value;
+    console.log(descText);//teste
+
+    let tituloAdd = document.getElementById('id-mensal').innerHTML;//teste
+    
+    //substituir os dados da coluna com base no checkbox selecionado
+    if(labelSelecionado === 'MENSAL'){
+      document.getElementById('id-mensal').textContent  = titulo;
+
+      document.getElementById('valor-mensal').innerText='R$ '+valor;
+
+      document.getElementById('descricao-mensal').textContent = descText;
+    
+
+    }else if(labelSelecionado === 'SEMANAL'){
+      document.getElementById('id-semanal').textContent  = titulo;
+
+      document.getElementById('valor-semanal').innerText='R$ '+valor;
+
+      document.getElementById('descricao-semanal').textContent = descText;
+     console.log('sacooo');
+
+    }else{
+      document.getElementById('id-atipico').textContent  = titulo;
+
+      document.getElementById('valor-atipico').innerText='R$ '+valor;
+
+      document.getElementById('descricao-atipico').textContent = descText;
+     console.log('sacooo');
+    }
+
+//SUBTRAIR O VALOR DA DESPESA DO VALOR TOTAL ADD NA ENTRADA
+    let valTotal = document.getElementById('valor-total').value;
+    console.log(valTotal)
+
+    let subtrairDespesas = valTotal - valor;
+    console.log(subtrairDespesas)
+
+    document.getElementById('valor-total').value = subtrairDespesas;
+
+    
+  }
+  
+  limpaInputDesp()
+  limparSelecao() 
+
+  document.getElementById('ocultar').style = 'display:none;'
+}
+
+function editar(){
+  document.getElementById('ocultar').style = 'display:grid;'
+}
+
+function finalizadoMensal(){
+  document.getElementById('id-mensal').style = "text-decoration: line-through; color:#d3d3d3";
+  document.getElementById('valor-mensal').style = "text-decoration: line-through; color:#d3d3d3";
+  document.getElementById('descricao-mensal').style = "text-decoration: line-through; color:#d3d3d3";
+}
+function finalizadoSemanal(){
+  document.getElementById('id-semanal').style = "text-decoration: line-through; color:#d3d3d3";
+  document.getElementById('valor-semanal').style = "text-decoration: line-through; color:#d3d3d3";
+  document.getElementById('descricao-semanal').style = "text-decoration: line-through; color:#d3d3d3";
+}
+
+function finalizadoAtipico(){
+  document.getElementById('id-atipico').style = "text-decoration: line-through; color:#d3d3d3";
+  document.getElementById('valor-atipico').style = "text-decoration: line-through; color:#d3d3d3";
+  document.getElementById('descricao-atipico').style = "text-decoration: line-through; color:#d3d3d3";atipico
+}
+
+
+function limpaInputDesp(){
+  document.getElementById('nome-desp').value = "";
+  document.getElementById('valor-desp').value = "";
+  document.getElementById('desc-desp').value = "";
+
+}
+
+function limparSelecao() {
+  var radios = document.getElementsByName('tipos');
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].checked = false;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
