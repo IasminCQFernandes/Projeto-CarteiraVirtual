@@ -201,9 +201,6 @@ function addDespesas() {
   document.getElementById('ocultar').style = 'display:none;'
 }
 
-function editar(){
-  document.getElementById('ocultar').style = 'display:grid;'
-}
 
 function finalizadoMensal(){
   document.getElementById('id-mensal').style = "text-decoration: line-through; color:#d3d3d3";

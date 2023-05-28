@@ -304,12 +304,23 @@ main h1{
 
 
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:425px) {
     #gif{
         top: -70px;
         width: 30%;
     }
 
+    header{
+        height: 170px;
+    }
+
+    .financas > header >.profile> img {
+        display: inline-block;
+        width: 20px;
+        margin: 0%;
+        position: relative;
+        top: -15px;
+    }
     h2{
         top: -35px;
         font-size: 1.6em;
@@ -358,7 +369,10 @@ main h1{
     .add-despesas{
         display: block;
     }
-    
+    #addDespesas{
+        position: relative;
+        padding: 2%;
+    }
     .desc-despesas{
         grid-area: desc-desp;
     }    
@@ -394,9 +408,83 @@ main h1{
         left: 125px;
         width: 50%;
     }
+    .organizacao h3{
+        font-size: 1em;
+    }
+    .organizacao p {
+        font-size: 1em;
+    }
+
 
 }
+
 @media screen and (min-width:1024px) {
+    #imgusuario{
+        width: 10%;
+        
+    }
+    .profile{
+        position: relative;
+        left: 150px;
+        font-size: 1.5em;
+    }
+    .profile img{
+        width: 5%;
+        top: 10px;
+    }
+    main h1{
+        font-size: 2em;
+    }
+    .painel{
+        font-size: 1.2em;
+    }
+    .painel input{
+       height: 20px;
+       font-size: 1em;
+    }
+
+    #add-desp{
+        width: 15%;
+        position: relative;
+        top: -10px;
+        font-size: 1em;
+    }
+    .desc-despesas label{
+        font-size: 1.2em;
+        margin: 2%;
+    }
+
+
+    .desc-despesas input, .desc-despesas textarea{
+        font-size: 1em;
+        margin: 2%;
+        width: 70%;
+    }
+
+    .tipo-despesas h4{
+        font-size: 1.2em;
+    }
+    .tipo-despesas label{
+        font-size: 1em;
+        
+    }
+    .check{
+        font-size: 1em;
+        margin: 2%;
+    }
+    #addDespesas{
+        width: 50%;
+        font-size: 1em;
+    }
+
+    .organizacao h3{
+        font-size: 1.2em;
+    }
+    .organizacao p {
+        font-size: 1em;
+    }
+}
+@media screen and (min-width:1440px) {
     #gif{
         top: -200px;
         width: 20%;
@@ -404,5 +492,73 @@ main h1{
     
     h2{
         top: -45px;
+        font-size: 3em;
+    }
+    #imgusuario{
+        width: 10%;
+        
+    }
+    #nomes{
+        top: -80px;
+    }
+    .profile{
+        position: relative;
+        left: 210px;
+        font-size: 1.5em;
+    }
+    .profile img{
+        width: 5%;
+        top: 10px;
+    }
+    main h1{
+        font-size: 3em;
+    }
+    .painel{
+        font-size: 2em;
+    }
+    .painel input{
+       height: 30px;
+       font-size: 1.2em;
+    }
+
+    #add-desp{
+        width: 20%;
+        position: relative;
+        top: -15px;
+        font-size: 1.5em;
+    }
+    .desc-despesas label{
+        font-size: 1.5em;
+        margin: 2%;
+    }
+
+
+    .desc-despesas input, .desc-despesas textarea{
+        font-size: 1.3em;
+        margin: 2%;
+        width: 70%;
+    }
+
+    .tipo-despesas h4{
+        font-size: 1.5em;
+    }
+    .tipo-despesas label{
+        font-size: 1.2em;
+        
+    }
+    .check{
+        font-size: 1.2em;
+        margin: 2%;
+    }
+    #addDespesas{
+        width: 50%;
+        font-size: 1.3em;
+    }
+
+    .organizacao h3{
+        font-size: 2em;
+    }
+    .organizacao p {
+        font-size: 1.5em;
     }
 }
